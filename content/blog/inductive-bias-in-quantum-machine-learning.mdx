@@ -1,0 +1,24 @@
+---
+title: "Inductive Bias in Quantum Machine Learning"
+date: "2026-01-05"
+tags: ["Quantum ML", "Theory"]
+summary: "How model structure, encoding, and measurement create useful priors in QML pipelines."
+---
+
+## Why inductive bias matters
+
+No model learns in a vacuum. In QML, the combination of feature maps, ansatz design, and observable choices defines the bias.
+
+## A simple kernel view
+
+For feature map $\phi(x)$ implemented by a quantum circuit, kernel methods use:
+
+$$
+K(x, x') = |\langle \phi(x) | \phi(x') \rangle|^2
+$$
+
+The geometry of this kernel decides what the model can generalize.
+
+## Practical note
+
+In experiments, hybrid models often win because they combine strong classical optimizers with quantum representations where useful.

@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 222 30% 8%;
+  --fg: 210 30% 96%;
+  --muted: 220 20% 18%;
+  --border: 220 20% 24%;
+  --accent: 192 88% 58%;
+}
+
+.light {
+  --bg: 210 33% 98%;
+  --fg: 222 47% 11%;
+  --muted: 214 30% 92%;
+  --border: 214 22% 84%;
+  --accent: 192 85% 42%;
+}
+
+html,
+body {
+  @apply bg-bg text-fg antialiased;
+}
+
+* {
+  @apply border-border;
+}
+
+.prose pre {
+  @apply rounded-xl border border-border bg-black/80;
+}
+
+.prose code::before,
+.prose code::after {
+  content: '';
+}

@@ -2,61 +2,55 @@ export type Project = {
   slug: string;
   title: string;
   description: string;
-  impact?: string;
+  longDescription: string;
   tags: string[];
-  featured?: boolean;
+  links: { label: string; href: string }[];
 };
 
 export const projects: Project[] = [
   {
-    slug: "hybrid-qml-health-signals",
-    title: "Hybrid QML for Biomedical Signal Classification",
-    description:
-      "Designed variational quantum-classical pipelines for noisy physiological signals, emphasizing robust feature maps and low-depth circuits.",
-    impact: "Improved precision on minority classes in pilot ECG datasets.",
-    tags: ["QML", "Hybrid Models", "Healthcare", "VQE"],
-    featured: true
+    slug: 'vitonet',
+    title: 'ViToNet',
+    description: 'A pipeline for generating captions from live video using modern machine learning models.',
+    longDescription:
+      'ViToNet combines frame extraction, multimodal embedding, and sequence generation to provide low-latency captions for dynamic scenes. The project explores robust computer vision under constrained hardware conditions.',
+    tags: ['Computer Vision', 'Multimodal ML', 'Python'],
+    links: [{ label: 'Publication', href: '#' }, { label: 'Code', href: '#' }]
   },
   {
-    slug: "secure-quantum-sensing",
-    title: "Secure Protocols for Quantum Sensing Networks",
-    description:
-      "Studied communication-security constraints in distributed sensing architectures that blend classical cryptography with quantum channels.",
-    impact: "Outlined deployment trade-offs for constrained sensing nodes.",
-    tags: ["Quantum Sensing", "Cryptography", "Information Theory"],
-    featured: true
+    slug: 'nv-center-quantum-sensing-simulation',
+    title: 'NV-Center Quantum Sensing Simulation',
+    description: 'Simulation framework for studying quantum sensing protocols.',
+    longDescription:
+      'A modular simulation environment for modeling NV-center spin dynamics, microwave pulse schedules, and noise channels to evaluate precision in realistic sensing scenarios.',
+    tags: ['Quantum Sensing', 'Simulation', 'Scientific Computing'],
+    links: [{ label: 'Preprint', href: '#' }]
   },
   {
-    slug: "resource-aware-qaoa",
-    title: "Resource-Aware QAOA Scheduling",
-    description:
-      "Benchmarked QAOA parameter schedules under realistic hardware constraints and noise budgets for combinatorial optimization tasks.",
-    tags: ["QAOA", "NISQ", "Optimization", "Benchmarking"],
-    featured: true
+    slug: 'quantum-transfer-learning-experiments',
+    title: 'Quantum Transfer Learning Experiments',
+    description: 'Empirical investigation of quantum vs classical transfer learning models.',
+    longDescription:
+      'This study benchmarks quantum transfer learning pipelines against classical baselines, focusing on sample efficiency, inductive priors, and optimization stability in low-data regimes.',
+    tags: ['Quantum ML', 'Transfer Learning', 'PennyLane'],
+    links: [{ label: 'Results', href: '#' }]
   },
   {
-    slug: "inductive-bias-qkernels",
-    title: "Inductive Bias in Quantum Kernel Methods",
-    description:
-      "Analyzed representation geometry of quantum kernels to understand generalization behavior in small-data scientific regimes.",
-    impact: "Provided practical guidance for kernel-selection workflows.",
-    tags: ["Quantum Kernels", "Inductive Bias", "Generalization"],
-    featured: true
+    slug: 'ngo-digital-infrastructure',
+    title: 'NGO Digital Infrastructure',
+    description: 'Designing web infrastructure for social organizations.',
+    longDescription:
+      'Built resilient digital systems for NGO operations, including content workflows, analytics dashboards, and secure communications tooling.',
+    tags: ['Infrastructure', 'Web Systems', 'Security'],
+    links: [{ label: 'Case Study', href: '#' }]
   },
   {
-    slug: "fault-tolerant-primitives",
-    title: "Fault-Tolerant Primitives for Sensing Workloads",
-    description:
-      "Mapped sensing-oriented primitives to error-corrected gate sets and estimated overhead under near-term fault-tolerant assumptions.",
-    tags: ["Fault Tolerance", "Compilation", "Sensing"],
-    featured: true
-  },
-  {
-    slug: "qft-secure-analytics",
-    title: "Quantum Fourier Methods for Secure Analytics",
-    description:
-      "Explored quantum Fourier transform variants for privacy-preserving frequency-domain analyses in distributed data settings.",
-    tags: ["QFT", "Security", "Distributed Systems"],
-    featured: false
+    slug: 'distributed-energy-trading-network',
+    title: 'Distributed Energy Trading Network',
+    description: 'Blockchain-based decentralized energy trading framework.',
+    longDescription:
+      'Designed a decentralized architecture for microgrid participants to exchange energy credits with transparent settlement and auditable smart contracts.',
+    tags: ['Blockchain', 'Energy Systems', 'Distributed Networks'],
+    links: [{ label: 'Architecture', href: '#' }]
   }
 ];
